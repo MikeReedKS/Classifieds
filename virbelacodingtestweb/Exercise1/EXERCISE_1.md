@@ -1,3 +1,5 @@
+# SEE README FILE INSIDE PROJECT PLEASE #
+
 # Exercise 1 #
 
 For this exercise you will create a REST API that provides data to support a classifieds application.
