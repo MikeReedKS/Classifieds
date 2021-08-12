@@ -1,0 +1,995 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Classifieds</name>
+    </assembly>
+    <members>
+        <member name="M:Classifieds.SwaggerConfig.GetXmlCommentsPath">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Classifieds.ReverseAlphabeticComparer">
+            <summary>
+            Order the controllers in reverse alphabetical order
+            </summary>
+        </member>
+        <member name="M:Classifieds.ReverseAlphabeticComparer.Compare(System.String,System.String)">
+            <summary>
+            Order User, Session, Listing (Reverse alphabetical order)
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="T:Classifieds.Areas.HelpPage.HelpPageConfig">
+            <summary>
+            Use this class to customize the Help Page.
+            For example you can set a custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> to supply the documentation
+            or you can provide the samples for the requests/responses.
+            </summary>
+        </member>
+        <member name="T:Classifieds.Areas.HelpPage.Controllers.HelpController">
+            <summary>
+            The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+            Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+            Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForMediaType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Sets the sample directly for all actions with the specified media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,Classifieds.Areas.HelpPage.HelpPageSampleGenerator)">
+            <summary>
+            Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageConfigurationExtensions.GetModelDescriptionGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>The <see cref="T:Classifieds.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator"/></returns>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            Gets the model that represents an API displayed on the help page. The model is initialized on the first call and cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription"/> ID.</param>
+            <returns>
+            An <see cref="T:Classifieds.Areas.HelpPage.Models.HelpPageApiModel"/>
+            </returns>
+        </member>
+        <member name="T:Classifieds.Areas.HelpPage.ModelDescriptions.ModelDescription">
+            <summary>
+            Describes a type model.
+            </summary>
+        </member>
+        <member name="T:Classifieds.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
+            <summary>
+            Generates model descriptions for given types.
+            </summary>
+        </member>
+        <member name="T:Classifieds.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="T:Classifieds.Areas.HelpPage.ModelDescriptions.ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="T:Classifieds.Areas.HelpPage.Models.HelpPageApiModel">
+            <summary>
+            The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.Models.HelpPageApiModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Classifieds.Areas.HelpPage.Models.HelpPageApiModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Classifieds.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+            Gets or sets the <see cref="P:Classifieds.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription"/> that describes the API.
+            </summary>
+        </member>
+        <member name="P:Classifieds.Areas.HelpPage.Models.HelpPageApiModel.UriParameters">
+            <summary>
+            Gets or sets the <see cref="T:Classifieds.Areas.HelpPage.ModelDescriptions.ParameterDescription"/> collection that describes the URI parameters for the API.
+            </summary>
+        </member>
+        <member name="P:Classifieds.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation">
+            <summary>
+            Gets or sets the documentation for the request.
+            </summary>
+        </member>
+        <member name="P:Classifieds.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription">
+            <summary>
+            Gets or sets the <see cref="T:Classifieds.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the request body.
+            </summary>
+        </member>
+        <member name="P:Classifieds.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters">
+            <summary>
+            Gets the request body parameter descriptions.
+            </summary>
+        </member>
+        <member name="P:Classifieds.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription">
+            <summary>
+            Gets or sets the <see cref="T:Classifieds.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the resource.
+            </summary>
+        </member>
+        <member name="P:Classifieds.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties">
+            <summary>
+            Gets the resource property descriptions.
+            </summary>
+        </member>
+        <member name="P:Classifieds.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+            Gets the sample requests associated with the API.
+            </summary>
+        </member>
+        <member name="P:Classifieds.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+            Gets the sample responses associated with the API.
+            </summary>
+        </member>
+        <member name="P:Classifieds.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+            Gets the error messages associated with this model.
+            </summary>
+        </member>
+        <member name="T:Classifieds.Areas.HelpPage.HelpPageSampleGenerator">
+            <summary>
+            This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageSampleGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Classifieds.Areas.HelpPage.HelpPageSampleGenerator"/> class.
+            </summary>
+        </member>
+        <member name="P:Classifieds.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+            Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="P:Classifieds.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+            Gets the objects that are used directly as samples for certain actions.
+            </summary>
+        </member>
+        <member name="P:Classifieds.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+            Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+        </member>
+        <member name="P:Classifieds.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories">
+            <summary>
+            Gets factories for the objects that the supported formatters will serialize as samples. Processed in order,
+            stopping when the factory successfully returns a non-<see langref="null"/> object.
+            </summary>
+            <remarks>
+            Collection includes just <see cref="M:Classifieds.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)"/> initially. Use
+            <code>SampleObjectFactories.Insert(0, func)</code> to provide an override and
+            <code>SampleObjectFactories.Add(func)</code> to provide a fallback.</remarks>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,Classifieds.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,Classifieds.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Search for samples that are provided directly through <see cref="P:Classifieds.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples"/>.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+            Gets the sample object that will be serialized by the formatters. 
+            First, it will look at the <see cref="P:Classifieds.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
+            one using <see cref="M:Classifieds.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(Classifieds.Areas.HelpPage.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:Classifieds.Areas.HelpPage.ObjectGenerator"/>) and other
+            factories in <see cref="P:Classifieds.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Resolves the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},Classifieds.Areas.HelpPage.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+            Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Classifieds.Areas.HelpPage.HelpPageSampleKey">
+            <summary>
+            This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Creates a new <see cref="T:Classifieds.Areas.HelpPage.HelpPageSampleKey"/> based on media type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Creates a new <see cref="T:Classifieds.Areas.HelpPage.HelpPageSampleKey"/> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageSampleKey.#ctor(Classifieds.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:Classifieds.Areas.HelpPage.HelpPageSampleKey"/> based on <see cref="P:Classifieds.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:Classifieds.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,Classifieds.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:Classifieds.Areas.HelpPage.HelpPageSampleKey"/> based on media type, <see cref="P:Classifieds.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:Classifieds.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="P:Classifieds.Areas.HelpPage.HelpPageSampleKey.ControllerName">
+            <summary>
+            Gets the name of the controller.
+            </summary>
+            <value>
+            The name of the controller.
+            </value>
+        </member>
+        <member name="P:Classifieds.Areas.HelpPage.HelpPageSampleKey.ActionName">
+            <summary>
+            Gets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="P:Classifieds.Areas.HelpPage.HelpPageSampleKey.MediaType">
+            <summary>
+            Gets the media type.
+            </summary>
+            <value>
+            The media type.
+            </value>
+        </member>
+        <member name="P:Classifieds.Areas.HelpPage.HelpPageSampleKey.ParameterNames">
+            <summary>
+            Gets the parameter names.
+            </summary>
+        </member>
+        <member name="P:Classifieds.Areas.HelpPage.HelpPageSampleKey.SampleDirection">
+            <summary>
+            Gets the <see cref="P:Classifieds.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.
+            </summary>
+        </member>
+        <member name="T:Classifieds.Areas.HelpPage.ImageSample">
+            <summary>
+            This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.ImageSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Classifieds.Areas.HelpPage.ImageSample"/> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+        </member>
+        <member name="T:Classifieds.Areas.HelpPage.InvalidSample">
+            <summary>
+            This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:Classifieds.Areas.HelpPage.ObjectGenerator">
+            <summary>
+            This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+            Generates an object for a given type. The type needs to be public, have a public default constructor and settable public properties/fields. Currently it supports the following types:
+            Simple types: <see cref="T:System.Int32"/>, <see cref="T:System.String"/>, <see cref="T:System.Enum"/>, <see cref="T:System.DateTime"/>, <see cref="T:System.Uri"/>, etc.
+            Complex types: POCO types.
+            Nullables: <see cref="T:System.Nullable`1"/>.
+            Arrays: arrays of simple types or complex types.
+            Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2"/>
+            Tuples: <see cref="T:System.Tuple`1"/>, <see cref="T:System.Tuple`2"/>, etc
+            Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2"/> or anything deriving from <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            Collections: <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.IEnumerable`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/>, <see cref="T:System.Collections.IList"/>, <see cref="T:System.Collections.IEnumerable"/>, <see cref="T:System.Collections.ICollection"/> or anything deriving from <see cref="T:System.Collections.Generic.ICollection`1"/> or <see cref="T:System.Collections.IList"/>.
+            Queryables: <see cref="T:System.Linq.IQueryable"/>, <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="T:Classifieds.Areas.HelpPage.SampleDirection">
+            <summary>
+            Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="T:Classifieds.Areas.HelpPage.TextSample">
+            <summary>
+            This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
+            </summary>
+        </member>
+        <member name="T:Classifieds.Areas.HelpPage.XmlDocumentationProvider">
+            <summary>
+            A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="M:Classifieds.Areas.HelpPage.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Classifieds.Areas.HelpPage.XmlDocumentationProvider"/> class.
+            </summary>
+            <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="T:Classifieds.Controllers.ListingController">
+            <summary>
+            This is the controller for the Listing object
+            </summary>
+        </member>
+        <member name="M:Classifieds.Controllers.ListingController.Post(System.String,Classifieds.Models.ListingNew)">
+            <summary>
+            Creates a new listing
+            </summary>
+            <param name="sessionId"></param>
+            <param name="listing"></param>
+        </member>
+        <member name="M:Classifieds.Controllers.ListingController.Get(System.String)">
+            <summary>
+            Gets all listings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Classifieds.Controllers.ListingController.Get(System.String,System.String)">
+            <summary>
+            Get a specific listing by Listing Id
+            </summary>
+            <param name="id"></param>
+            <param name="sessionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Classifieds.Controllers.ListingController.Put(System.String,System.String,Classifieds.Models.ListingNew)">
+            <summary>
+            Update an existing listing
+            </summary>
+            <param name="id">Listing Id</param>
+            <param name="sessionId">Session Id</param>
+            <param name="listing">Updated listing info. Fill in all fields.</param>
+        </member>
+        <member name="M:Classifieds.Controllers.ListingController.Delete(System.String,System.String)">
+            <summary>
+            Delete an existing listing
+            </summary>
+            <param name="id">Listing Id</param>
+            <param name="sessionId">Session Id</param>
+        </member>
+        <member name="T:Classifieds.Controllers.SessionController">
+            <summary>
+            Controller for the session object
+            </summary>
+        </member>
+        <member name="M:Classifieds.Controllers.SessionController.Post(System.String,System.String)">
+            <summary>
+            Creates a new Session
+            </summary>
+            <param name="userName"></param>
+            <param name="userPassword"></param>
+        </member>
+        <member name="M:Classifieds.Controllers.SessionController.Delete(System.String,System.String)">
+            <summary>
+            Deletes an existing user's session. Must know user's user name and password
+            </summary>
+            <param name="userName"></param>
+            <param name="userPassword"></param>
+        </member>
+        <member name="T:Classifieds.Controllers.UserController">
+            <summary>
+            Controller for the User object
+            </summary>
+        </member>
+        <member name="M:Classifieds.Controllers.UserController.Post(System.String,System.String,System.String)">
+            <summary>
+                Creates a new user.
+            </summary>
+            <param name="userName">The new user name.</param>
+            <param name="userEmail">The email address of the new user.</param>
+            <param name="userPassword">The password for the new user, passed in body.</param>
+            <returns>GUID - The new users Id.</returns>
+            <response code="200">OK - New user was created.</response>
+            <response code="401">Forbidden - Authorization has been denied for this request. API Key or Session Id failure can cause this response.</response>
+            <response code="409">Conflict - User already exists.</response>
+            <response code="5xx">Exception - The message may contain additional exception information.</response>
+            <remarks>
+                Creates a new user.
+            </remarks>
+        </member>
+        <member name="M:Classifieds.Controllers.UserController.Get(System.Guid,System.String)">
+            <summary>
+            Gets an existing user based on UserId
+            </summary>
+            <param name="id"></param>
+            <param name="sessionId"></param>
+            <returns>User object</returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>
+        </member>
+        <member name="M:Classifieds.Controllers.UserController.Get(System.String,System.String)">
+            <summary>
+            Gets an existing user based on email address
+            </summary>
+            <param name="userEmail"></param>
+            <param name="sessionId"></param>
+            <returns></returns>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>
+            <remarks>
+                This is a non-standard RESTful implementation that I show as an example. REST, like all patterns and practices are guides and not
+                hard and fast rules. The engineer must define what is needed and bend the rules as needed to create great systems. As long as the
+                rules are known and breaking the rules is a conscious choice, then it is acceptable.
+            </remarks>
+        </member>
+        <member name="M:Classifieds.DataAccess.SessionDataAccess.CreateUserSession(Classifieds.Models.User)">
+            <summary>
+            Create a new user session, deleting any existing session for the user, if one exists.
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Classifieds.DataAccess.SessionDataAccess.DeleteSession(Classifieds.Models.User)">
+            <summary>
+            Deletes any sessions for the specified user
+            </summary>
+            <param name="user"></param>
+        </member>
+        <member name="M:Classifieds.DataAccess.SessionDataAccess.SessionCheck(System.String)">
+            <summary>
+            Checks to see if the session id is valid.
+            It does not correlate it to the user to assure there is a match.
+            Matching to the user could be added, but it was overkill for this demo.
+            </summary>
+            <param name="sessionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Classifieds.DataAccess.SessionDataAccess.FindSessionUser(System.String)">
+            <summary>
+            Finds the user associated with a session
+            </summary>
+            <param name="sessionId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Classifieds.DataAccess.UserDataAccess">
+             <summary>
+             This Data Access object is lame, it uses JSON to avoid the need to include a DB in the project. This will only support really small scale projects,
+             The layers of Controller->Service->DataAccess is sound and should be followed, and you can replace the Data Access layer to use any data source desired without
+             the need to rewrite any higher level code. Simplicity was the goal here, sacrificing scalability and security. Data is stored in the program folder in plain text
+             within JSON files, so anyone with access to the program folder can easily hack the data. Simple two-way hashing is done to the passwords as a simple safeguard.
+             I just so happened to already had a simple two-way string crypto library, so I used that. In a real DB I'd generate a seed and it would be a 1 way hash with a
+             separate seed stored for each password stored. There must never be a way to retrieve the original password in a secure password store.
+            
+             This level remain public so that we can easily run unit tests, but often I mark this as internal so that the Service layer is the only testing point.
+             The service layer truly is the public interface, and the controller just drives the UI. The Data Access layer should be protected as it does not include the business logic
+             to manipulate the data as needed. We may expose private data if we expose this layer publicly. 
+             </summary>
+        </member>
+        <member name="M:Classifieds.DataAccess.UserDataAccess.CreateUser(System.String,System.String,System.String)">
+            <summary>
+            Creates the new user by persisting it within the userDB.json file.
+            </summary>
+            <param name="userName">Users User Name</param>
+            <param name="userEmail">Users Email Address</param>
+            <param name="userPassword">Users Password</param>
+            <returns>The new user's Id in the form of a Guid.
+            The password is encrypted prior to being stored.</returns>
+        </member>
+        <member name="M:Classifieds.DataAccess.UserDataAccess.ReadUser(System.Guid)">
+            <summary>
+            Finds user using the user id
+            </summary>
+            <param name="userId"></param>
+            <returns>A user if a match is found, else an empty user object.</returns>
+        </member>
+        <member name="M:Classifieds.DataAccess.UserDataAccess.ReadUser(System.String)">
+            <summary>
+            Finds user using email address
+            </summary>
+            <param name="userEmail"></param>
+            <returns>A user if a match is found, else an empty user object.</returns>
+        </member>
+        <member name="M:Classifieds.DataAccess.UserDataAccess.ReadUser(System.String,System.String)">
+            <summary>
+            Finds user using userName and userPassword
+            </summary>
+            <param name="userName"></param>
+            <param name="userPassword"></param>
+            <returns>A user if a match is found, else an empty user object.</returns>
+        </member>
+        <member name="M:Classifieds.DataAccess.UserDataAccess.UpdateUser(System.Guid,System.String)">
+            <summary>
+            Updates the password of an existing user
+            </summary>
+            <param name="userId"></param>
+            <param name="userPassword"></param>
+            <returns><c>true</c> if a match is found and updated, or <c>false</c> if the user is not found or cannot be updated.</returns>
+        </member>
+        <member name="M:Classifieds.DataAccess.UserDataAccess.DeleteUser(System.Guid,System.String)">
+            <summary>
+            Deletes an existing user
+            </summary>
+            <param name="userId">The user Id of an existing user.</param>
+            <param name="userPassword">The password for the user to be deleted.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Classifieds.Extensions.HttpRequestMessageExtensionMethods">
+            <summary>
+            Extension methods for the HttpRequestMessage type
+            </summary>
+        </member>
+        <member name="M:Classifieds.Extensions.HttpRequestMessageExtensionMethods.ValidateApiKey(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Check the headers to assure that the API Key is valid.
+            In this case, there is just one API Key hard coded which is 1234567.
+            </summary>
+            <param name="targetObject"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Classifieds.Helpers.CryptographyHelper">
+            <summary>
+            This library is a very simple two-way hashing used to obfuscate open text when it might be exposed
+            This does not make reverse engineering impossible, it simply increases the difficulty.
+            If the hacker does not have access to this library, the reverse engineering is difficult and that
+            is enough to slow down or stop most attackers. 
+            </summary>
+        </member>
+        <member name="M:Classifieds.Helpers.CryptographyHelper.TextEncode(System.String)">
+            <summary>
+            Simple text obfuscation in a way that allows difficult to hack, but simple to reverse encryption
+            </summary>
+            <param name="stringToProcess">The text string to obfuscate.</param>
+            <returns>The obfuscated text</returns>
+        </member>
+        <member name="M:Classifieds.Helpers.CryptographyHelper.TextDecode(System.String)">
+            <summary>
+            This takes in previously obfuscated text and returns the original text. 
+            </summary>
+            <param name="stringToProcess"></param>
+            <returns>The original string that was previously processed by TextEncode.</returns>
+        </member>
+        <member name="M:Classifieds.Helpers.CryptographyHelper.MixUp7(System.Byte[])">
+            <summary>
+            Swaps bytes 1-4, 2-5, 3-6 and leaves 7 unchanged, repeats this for the length of the sting
+            </summary>
+            <param name="byteArray"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Classifieds.Helpers.SecurityHelper">
+            <summary>
+            Routines to simplify security
+            </summary>
+        </member>
+        <member name="M:Classifieds.Helpers.SecurityHelper.CheckApiKey(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Super simple API Key check against a hard coded key
+            </summary>
+            <param name="request"></param>
+            <returns><c>true</c> if API Key matches, <c>false</c> if it does not match.</returns>
+        </member>
+        <member name="M:Classifieds.Helpers.SecurityHelper.ApiKeyCheck(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Checks the API Key to assure it matches
+            </summary>
+            <param name="request"></param>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>
+        </member>
+        <member name="T:Classifieds.Helpers.StorageHelper">
+            <summary>
+            Routines to simplify access to storage, typically the disk.
+            </summary>
+        </member>
+        <member name="M:Classifieds.Helpers.StorageHelper.GetDataFolder">
+            <summary>
+            Gets the location on disk to store the data file(s).
+            </summary>
+            <returns>Folder Path where data files can be found.</returns>
+        </member>
+        <member name="T:Classifieds.Models.Listing">
+            <summary>
+            The Listing Object
+            </summary>
+        </member>
+        <member name="F:Classifieds.Models.Listing.ListingId">
+            <summary>
+            The unique id for the listing
+            </summary>
+        </member>
+        <member name="F:Classifieds.Models.Listing.Title">
+            <summary>
+            Title of the listing
+            </summary>
+        </member>
+        <member name="F:Classifieds.Models.Listing.Description">
+            <summary>
+            Description of the item for sale
+            </summary>
+        </member>
+        <member name="F:Classifieds.Models.Listing.Price">
+            <summary>
+            The price to purchase the item
+            </summary>
+        </member>
+        <member name="F:Classifieds.Models.Listing.ListedDate">
+            <summary>
+            When the listing was created
+            </summary>
+        </member>
+        <member name="F:Classifieds.Models.Listing.ListingUpdated">
+            <summary>
+            When the listing was last updated
+            </summary>
+        </member>
+        <member name="F:Classifieds.Models.Listing.UserId">
+            <summary>
+            The user who listed the item for sale
+            </summary>
+        </member>
+        <member name="T:Classifieds.Models.ListingNew">
+            <summary>
+            Just the parts of a listing supplied by the user
+            </summary>
+        </member>
+        <member name="F:Classifieds.Models.ListingNew.Title">
+            <summary>
+            Title of the listing
+            </summary>
+        </member>
+        <member name="F:Classifieds.Models.ListingNew.Description">
+            <summary>
+            Description of the item for sale
+            </summary>
+        </member>
+        <member name="F:Classifieds.Models.ListingNew.Price">
+            <summary>
+            The price to purchase the item
+            </summary>
+        </member>
+        <member name="T:Classifieds.Models.Session">
+            <summary>
+            A single session object
+            </summary>
+        </member>
+        <member name="F:Classifieds.Models.Session.UserId">
+            <summary>
+            user's Id
+            </summary>
+        </member>
+        <member name="F:Classifieds.Models.Session.SessionId">
+            <summary>
+            The session Id last assigned to the user
+            </summary>
+        </member>
+        <member name="F:Classifieds.Models.Session.SessionTimeout">
+            <summary>
+            When the session expires
+            </summary>
+        </member>
+        <member name="T:Classifieds.Models.User">
+            <summary>
+            The User object.
+            The user logs in to post classified ads or to search for them.
+            </summary>
+        </member>
+        <member name="F:Classifieds.Models.User.UserId">
+            <summary>
+            The GUID used to describe the user.
+            </summary>
+        </member>
+        <member name="F:Classifieds.Models.User.UserName">
+            <summary>
+            The user name selected by the user as a unique id representing them.
+            </summary>
+        </member>
+        <member name="F:Classifieds.Models.User.UserEmail">
+            <summary>
+            The users email address.
+            </summary>
+        </member>
+        <member name="F:Classifieds.Models.User.UserPassword">
+            <summary>
+            The users password.
+            </summary>
+        </member>
+        <member name="T:Classifieds.Services.ListingService">
+            <summary>
+            Service to handle the Listing object
+            </summary>
+        </member>
+        <member name="M:Classifieds.Services.ListingService.PostListing(System.String,Classifieds.Models.ListingNew)">
+            <summary>
+            Create a new listing
+            </summary>
+            <param name="sessionId"></param>
+            <param name="newListing"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Classifieds.Services.ListingService.GetAllListings">
+            <summary>
+            Gets the full list of listings without any filtering or sorting
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Classifieds.Services.ListingService.GetListing(System.String)">
+            <summary>
+            Get any listings that match the supplied listing id. (Should always be one or zero entries)
+            </summary>
+            <param name="id"></param>
+            <returns>Listing</returns>
+        </member>
+        <member name="M:Classifieds.Services.ListingService.PutListing(System.String,System.String,Classifieds.Models.ListingNew)">
+            <summary>
+            Updates the listing specified by the id
+            </summary>
+            <param name="listingId">The Listing Id</param>
+            <param name="sessionId">The Session Id</param>
+            <param name="listing">The updated listing values - populate all fields</param>
+            <returns><c>true</c> if the listing was updated, <c>false</c> if the update failed.</returns>
+        </member>
+        <member name="M:Classifieds.Services.ListingService.DeleteListing(System.String,System.String)">
+            <summary>
+            Deletes the listing matching the Listing Id (if it exists)
+            </summary>
+            <param name="listingId"></param>
+            <returns><c>true</c> if the listing was deleted, <c>false</c> if the delete failed.</returns>
+        </member>
+        <member name="T:Classifieds.Services.SessionService">
+             <summary>
+             Simple services to handle the session object. Could use ISessionManager, but this is easier and better fit for this demo
+            
+             Note that while we could easily have handled the work here, there is no external data source,
+             instead we followed the pattern to stay consistent and to support changing the session persistence to another form than a static collection.
+             Having the session list in memory, like many of the design choices, is based on the small scale design here. We'd do a lot of things differently
+             if this was a project meant to scale. I cut corners for clarity and for time savings.
+             </summary>
+        </member>
+        <member name="M:Classifieds.Services.SessionService.PostSession(System.String,System.String)">
+            <summary>
+            Create a new session for the user
+            </summary>
+            <param name="userName"></param>
+            <param name="userPassword"></param>
+            <returns>Session Id</returns>
+        </member>
+        <member name="M:Classifieds.Services.SessionService.DeleteSession(System.String,System.String)">
+            <summary>
+            Deletes a session based on user name and password
+            </summary>
+            <param name="userName"></param>
+            <param name="userPassword"></param>
+        </member>
+        <member name="M:Classifieds.Services.SessionService.SessionCheck(System.String)">
+            <summary>
+            Checks the session to assure it is valid
+            </summary>
+            <param name="sessionId">Session Id</param>
+            <exception cref="T:System.Web.Http.HttpResponseException"></exception>
+        </member>
+        <member name="T:Classifieds.Services.UserService">
+             <summary>
+             This Service Layer supports the User object.
+             
+             All business logic belongs at the service layer.
+             There isn't really any business logic for the user object, so this is just a pass-through layer, but it is still important
+             and should not be skipped.
+            
+             Note that the service layer works to bridge the lexicon from Controller
+             which uses nomenclature based on HTTP Verbs and the Data Access layer which
+             uses the nomenclature of CRUD. This allows each domain to maintain a standard
+             lexicon of terms and centralizes the conversion of terms to this layer.
+             </summary>
+        </member>
+        <member name="M:Classifieds.Services.UserService.PostUser(System.String,System.String,System.String)">
+            <summary>
+            Creates a new user object
+            </summary>
+            <param name="userName">Users User Name</param>
+            <param name="userEmail">Users Email Address</param>
+            <param name="userPassword">Users Password</param>
+            <returns>GUID for User Id</returns>
+        </member>
+        <member name="M:Classifieds.Services.UserService.GetUser(System.Guid)">
+            <summary>
+            Gets existing user from user Id
+            </summary>
+            <param name="userId"></param>
+            <returns>User object</returns>
+        </member>
+        <member name="M:Classifieds.Services.UserService.GetUser(System.String)">
+            <summary>
+            Gets an existing user from email address
+            </summary>
+            <param name="userEmail"></param>
+            <returns>User object</returns>
+        </member>
+        <member name="M:Classifieds.Services.UserService.GetUser(System.String,System.String)">
+            <summary>
+            Gets an existing user from user name and password
+            </summary>
+            <param name="userName"></param>
+            <param name="userPassword"></param>
+            <returns>User object</returns>
+        </member>
+    </members>
+</doc>
